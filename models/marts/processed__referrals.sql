@@ -17,6 +17,8 @@ with processed__referrals as (
 		company_status_rank
 	from
         {{ ref('int__referrals_partners_join') }}
+	where
+		referral_id is not null
 )
 
 select * from processed__referrals

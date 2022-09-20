@@ -14,7 +14,7 @@ with int__referrals_partners_join as (
 		partners.partner_type,
 		partners.lead_sales_contact,
 		sales_people.country,
-		rank() over(partition by referrals.company_id, referrals.status, is_outbound order by referrals.created_at) as company_status_rank		
+		rank() over(partition by referrals.company_id, referrals.status, is_outbound order by referrals.created_at) as company_status_rank
 	from
 		{{ ref('staging__partners') }} as partners
 	left join

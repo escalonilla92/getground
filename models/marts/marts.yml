@@ -1,0 +1,160 @@
+
+version: 2
+
+models:
+  - name: processed__partners
+    description: This table has partners details and aggregated referrals metrics
+    columns:
+      - name: partner_id
+        description: partner id from the referral partner
+        tests:
+          - not_null
+      - name: partners_created_at
+        description: Time the partner was created
+        tests:
+          - not_null
+      - name: partner_type
+        description: Partner type
+        tests:
+          - not_null
+      - name: lead_sales_contact
+        description: Our sales person responsible for the account
+        tests:
+          - not_null
+      - name: country
+        description: The country where the sales person is based
+        tests:
+          - not_null
+      - name: total_inbound_referrals
+        description: Total number of inbound referrals
+        tests:
+          - not_null
+      - name: successful_inbound_referrals
+        description: Total number of successful inbound referrals
+        tests:
+          - not_null
+      - name: successful_inbound_first_referrals
+        description: Total number of successful inbound referrals that are the first one for a company
+        tests:
+          - not_null
+      - name: total_inbound_referrals_last_30_days
+        description: Total number of inbound referrals in the last 30 days
+        tests:
+          - not_null
+      - name: successful_inbound_referrals_last_30_days
+        description: Total number of successful inbound referrals in the last 30 days
+        tests:
+          - not_null
+      - name: successful_inbound_first_referrals_last_30_days
+        description: Total number of successful inbound referrals that are the first one for a company in the last 30 days
+        tests:
+          - not_null
+
+  - name: processed__referrals
+    description: This table has all the referrals and its details
+    columns:
+      - name: referral_id
+        description: id for referrals
+        tests:
+          - not_null
+          - unique
+      - name: partner_id
+        description: partner id from the referral partner
+        tests:
+          - not_null
+      - name: referral_created_at
+        description: time referral was created
+        tests:
+          - not_null
+      - name: referral_updated_at
+        description: time when the referral status went from `pending` to either `disinterested` or `successful`
+        tests:
+          - not_null
+      - name: company_id
+        description: company id from the referred company
+        tests:
+          - not_null
+      - name: consultant_id
+        description: id from the referral consultant in the partner
+        tests:
+          - not_null
+      - name: status 
+        description: current status of the referral
+        tests:
+          - not_null
+      - name: is_outbound
+        description: whether referral is outbound or inbound
+        tests:
+          - not_null
+      - name: partners_created_at
+        description: Time the partner was created
+        tests:
+          - not_null
+      - name: partner_type
+        description: Partner type
+        tests:
+          - not_null
+      - name: lead_sales_contact
+        description: Our sales person responsible for the account
+        tests:
+          - not_null
+      - name: country
+        description: The country where the sales person is based
+        tests:
+          - not_null
+      - name: company_status_rank
+        description: Rank of referral per company, status and wether is outbound or not. This will allow us to get the first inbound, succesful referral per company_id
+        tests:
+          - not_null
+  - name: processed__successful_inbound_referrals
+    description: This table has only the first inbound succesful referral per company.
+    columns:
+      - name: referral_id
+        description: id for referrals
+        tests:
+          - not_null
+          - unique
+      - name: partner_id
+        description: partner id from the referral partner
+        tests:
+          - not_null
+      - name: referral_created_at
+        description: time referral was created
+        tests:
+          - not_null
+      - name: referral_updated_at
+        description: time when the referral status went from `pending` to either `disinterested` or `successful`
+        tests:
+          - not_null
+      - name: company_id
+        description: company id from the referred company
+        tests:
+          - not_null
+      - name: consultant_id
+        description: id from the referral consultant in the partner
+        tests:
+          - not_null
+      - name: status 
+        description: current status of the referral
+        tests:
+          - not_null
+      - name: is_outbound
+        description: whether referral is outbound or inbound
+        tests:
+          - not_null
+      - name: partners_created_at
+        description: Time the partner was created
+        tests:
+          - not_null
+      - name: partner_type
+        description: Partner type
+        tests:
+          - not_null
+      - name: lead_sales_contact
+        description: Our sales person responsible for the account
+        tests:
+          - not_null
+      - name: country
+        description: The country where the sales person is based
+        tests:
+          - not_null
