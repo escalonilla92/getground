@@ -37,3 +37,7 @@ seeds:
       +column_types:
         created_at: float
         updated_at: float
+
+vars:
+  # date we'll use at current_date given data is not up dated.
+  case_current_date: "'2021-05-05'"

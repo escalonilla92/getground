@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: int__referrals_partners_join
+    description: "This table pull partners details from the source and recast the columns types"
+    columns:
+      - name: referral_id
+        description: "id for referrals"
+      - name: partner_id
+        description: partner id from the referral partner
+      - name: referral_created_at
+        description: time referral was created
+      - name: referral_updated_at
+        description: time when the referral status went from `pending` to either `disinterested` or `successful`
+      - name: company_id
+        description: company id from the referred company
+      - name: company_id
+        description: company id from the referred company  
+      - name: consultant_id
+        description: id from the referral consultant in the partner
+      - name: status 
+        description: current status of the referral
+      - name: is_outbound
+        description: whether referral is outbound or inbound 
+      - name: partners_created_at
+        description: Time the partner was created
+        tests:
+          - not_null
+      - name: partner_type
+        description: Partner type
+        tests:
+          - not_null
+      - name: lead_sales_contact
+        description: Our sales person responsible for the account
+        tests:
+          - not_null
+      - name: country
+        description: The country where the sales person is based
+        tests:
+          - not_null
+      - name: company_status_rank
+        description: Rank of referral per company, status and wether is outbound or not.
