@@ -56,7 +56,7 @@ We currently have sales people in the UK, Singapore and Hong Kong.
 
 2. Use dbt to pre-precess the data and output dbt models for analysis. Include appropriate data quality tests and documentation.
 
-    I've pre-process the data using dbt creating multiple tables, staging, intermediate and marts tables that can be used for analysis. You can find further explanation on the final tables in [here](https://github.com/escalonilla92/getground/blob/main/analyses/getground_analysis.md#Processed%20Tables)
+    I've pre-process the data using dbt creating multiple tables, staging, intermediate and marts tables that can be used for analysis. You can find further explanation on the final tables in [here](https://github.com/escalonilla92/getground/blob/main/analyses/getground_analysis.md#Processed%20%Tables)
 
 3. Analyse the data using SQL. Be sure to include your investigative thought process, findings, limitations, and assumptions.
 
