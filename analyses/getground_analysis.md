@@ -70,7 +70,8 @@ First of all I had a look at all the tables to get a quick idea of what the data
 
 After having a look at the raw tables, I would like to understand how the referrals table works, and understanding referrals per partners.
 
-```-- understanding distribution or referrals by partner_id
+```
+-- understanding distribution or referrals by partner_id
 select
 	partner_id,
 	count(company_id) as count,
@@ -144,7 +145,8 @@ We can see below what the referral table looks like fore company_id = 0 and comp
 
 I've have a quick look at how the different partners are distrubuted by sales agent. I found the distribution to be very diverse with some agents having 120 partners assigned and others only 5.
 
-```-- understanding distribution of company per sales agent
+```
+-- understanding distribution of company per sales agent
 select
 	lead_sales_contact,
 	count(id) as count
@@ -153,7 +155,8 @@ from
 group by
 	lead_sales_contact
 order by
-	count desc```
+	count desc
+```	
 
 | lead\_sales\_contact | count    |
 | -------------------- | -------- |
@@ -172,7 +175,7 @@ order by
 | Fig                  | 4        |
 
 
-## Conclusion
+## Conclusion
 
 Based of what we are seeing here we can see in the referral table a company_id can be referred by multiplee companies. As we don't have any information by customer I'm assuming this could be different partners recommending multiple persons, but the same company.
 
