@@ -64,4 +64,4 @@ We currently have sales people in the UK, Singapore and Hong Kong.
 
 4. Based on your analysis, how would you reccomend GG improve the quality of the analyses we can deliver.
 
-    I've made some recommendatinos that can be found in [here]([here](https://github.com/escalonilla92/getground/blob/main/analyses/getground_analysis.md#Conclusion)
+    I've made some recommendatinos that can be found in [here](https://github.com/escalonilla92/getground/blob/main/analyses/getground_analysis.md#Conclusion)
