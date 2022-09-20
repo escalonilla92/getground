@@ -233,7 +233,7 @@ Based on the analysis above and in order to have some clear data that we can use
         - `successful_inbound_first_referrals_last_30_days:` Total number of successful inbound referrals that are the first one for a company in the last 30 days
 
 - `processed__successful_inbound_referrals`: This table has all the information about the succesful inbound referrals. I've only considered a succesful inbound referral as the first succesful inbound referral per company_id, as I assumed we could only had one referral per company_id.
-    columns:
+    - columns:
         - `referral_id:`id for referrals
         - `partner_id:` partner id from the referral partner
         - `referral_created_at:` time referral was created
