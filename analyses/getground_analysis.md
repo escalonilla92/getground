@@ -197,7 +197,7 @@ We could improve this by:
     - Update sales_people table to capture all sales peoples in the partners table.
     - Add referral fee in the referral table.
 
-## Processed Tables
+## Processed Tables
 
 Based on the analysis above and in order to have some clear data that we can use for analysis I've created three mart tables:
 
