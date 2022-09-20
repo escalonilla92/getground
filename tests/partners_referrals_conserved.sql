@@ -11,7 +11,7 @@ with input_value as (
 
 output_value as (
     select
-        sum(total_referrals) as output_value
+        sum(total_inbound_referrals) as output_value
     from
         {{ ref('processed__partners') }}
 ),

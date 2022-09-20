@@ -39,4 +39,4 @@ models:
         tests:
           - not_null
       - name: company_status_rank
-        description: Rank of referral per company, status and wether is outbound or not.
+        description: Rank of referral per company, status and wether is outbound or not. This will allow us to get the first inbound, succesful referral per company_id

@@ -13,7 +13,7 @@ with processed__partners as (
                     is_outbound = False
                     then referral_id
             end
-        ) as total_referrals,
+        ) as total_inbound_referrals,
         count(
             case
                 when 
@@ -21,7 +21,7 @@ with processed__partners as (
                     and status = 'successful'
                     then referral_id
             end
-        ) as sucessful_referrals,
+        ) as successful_inbound_referrals,
         count(
             case
                 when 
@@ -30,7 +30,7 @@ with processed__partners as (
                     and status = 'successful'
                     then referral_id
             end 
-        ) as sucessful_first_referrals,
+        ) as successful_inbound_first_referrals,
         count(
             case
                 when 
@@ -38,7 +38,7 @@ with processed__partners as (
                     and {{datediff('referral_created_at', var('case_current_date'), 'day')}} < 30
                     then referral_id
             end
-        ) as total_referrals_last_30_days,
+        ) as total_inbound_referrals_last_30_days,
         count (
             case
                 when 
@@ -47,7 +47,7 @@ with processed__partners as (
                     and {{datediff('referral_created_at', var('case_current_date'), 'day')}} < 30
                     then referral_id
             end
-        ) as sucessful_referrals_last_30_days,
+        ) as successful_inbound_referrals_last_30_days,
         count (
             case
                 when 
@@ -57,7 +57,7 @@ with processed__partners as (
                     and {{datediff('referral_created_at', var('case_current_date'), 'day')}} < 30
                     then referral_id
             end
-        ) as sucessful_first_referrals_last_30_days
+        ) as successful_inbound_first_referrals_last_30_days
     from
         {{ ref('int__referrals_partners_join') }}
     group by

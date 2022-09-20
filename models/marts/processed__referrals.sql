@@ -13,11 +13,10 @@ with processed__referrals as (
 		partners_created_at,
 		partner_type,
 		lead_sales_contact,
-		country
+		country,
+		company_status_rank
 	from
         {{ ref('int__referrals_partners_join') }}
-    where
-		is_outbound = FALSE
 )
 
 select * from processed__referrals
