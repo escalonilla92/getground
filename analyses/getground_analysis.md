@@ -66,7 +66,7 @@ First of all I had a look at all the tables to get a quick idea of what the data
 | Sky    | HongKong  |
 | Cloud  | UK        |
 
-## Table structure analysis
+## Table structure analysis
 
 After having a look at the raw tables, I would like to understand how the referrals table works, and understanding referrals per partners.
 
@@ -171,7 +171,8 @@ order by
 | 0                    | 5        |
 | Fig                  | 4        |
 
-## Conclusion
+
+## Conclusion
 
 Based of what we are seeing here we can see in the referral table a company_id can be referred by multiplee companies. As we don't have any information by customer I'm assuming this could be different partners recommending multiple persons, but the same company.
 
@@ -193,7 +194,7 @@ We could improve this by:
     - Update sales_people table to capture all sales peoples in the partners table.
     - Add referral fee in the referral table.
 
-## Processed Tables
+## Processed Tables
 
 Based on the analysis above and in order to have some clear data that we can use for analysis I've created three mart tables:
 
